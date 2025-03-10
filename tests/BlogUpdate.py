@@ -58,7 +58,7 @@ class BlogUpdate:
         WebDriverWait(self.driver,1).until(EC.alert_is_present())
         alert=self.driver.switch_to.alert
         #assert alert.text=="更新失败"
-        #此处为bug：弹窗没有文字提示
+        #此处为bug：更新失败弹窗没有文字提示
         alert.accept()
         self.driver.find_element(By.CSS_SELECTOR,"#title").send_keys("发布文章测试")
         #正文更新为空，点击“更新文章”按钮
@@ -68,7 +68,7 @@ class BlogUpdate:
         WebDriverWait(self.driver,1).until(EC.alert_is_present())
         alert=self.driver.switch_to.alert
         #assert alert.text=="更新失败"
-        #此处为bug：弹窗没有文字提示
+        #此处为bug：更新失败弹窗没有文字提示
         alert.accept()
 
     # 测试博客更新页(未登录状态)
